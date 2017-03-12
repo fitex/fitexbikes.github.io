@@ -1,0 +1,5 @@
+name : Fitex Bikes
+
+collections:
+  bikes:
+    output: false
