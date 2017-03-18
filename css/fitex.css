@@ -1,0 +1,20 @@
+.cp-banner {
+    height: 100vh;
+}
+
+.cp-video-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cp-banner .cp-arrow-btn {
+    bottom: 60px;
+}
+
+.Subtitle {
+    color: white !important;
+    font-size: 24px !important;
+}
