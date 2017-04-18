@@ -4,7 +4,7 @@
 .cp-nav-holder .navbar-nav li ul li:before,.cp_side-navigation li:hover > a,.cp-mega-menu .dropdown-menu li:before,#home-slider1 .owl-controls .owl-nav .owl-next,.cp-btn-style1,#cp-testimonial-slider .owl-dots .owl-dot span
 ,#cp-blog-slider .owl-controls .owl-nav .owl-next,.cp-pro-meta li.pro-cart,.cp-footer,.widget-search form .btn-submit,.cp-slider-content .cp-readmore-btn,.cp-events-inner .left .date,.cp-our-skills-section,.widget-subscribe form .btn-submit,.cp-tab-box .nav-tabs > li.active > a, .cp-tab-box.nav-tabs > li.active > a:hover, .cp-tab-box .nav-tabs > li.active > a:focus, .cp-tab-box .nav-tabs > li a:hover
 ,#cp-widget-slider .owl-dot.active span,.cp-btn-listing .nav-tabs > li.active > a,.cp-btn-listing .nav-tabs > li.active > a:hover,.cp-btn-listing .nav-tabs > li.active > a:focus,#cp-range-slider .ui-slider-range,.cp-range-slider-holder .cp-filter,.cp-error-section_v2,#cp-inner-error2,.cp-calendar-box .form-group .fa-users,#cp-calendar .fc-event,.cp-popup-holder form .subscribe,.cp-popup-holder #popup-close{
- 	background-color:#c0a375; 
+ 	background-color:#00aedb;
 
  }
 
@@ -17,17 +17,17 @@ Text Color Css*/
 ,.cp-pagination-row .pagination > li > a:hover, .cp-pagination-row .pagination > li > span:hover, .cp-pagination-row .pagination > li > a:focus, .cp-pagination-row .pagination > li > span:focus,.cp-pagination-row .pagination .active a,.cp-pagination-row .pagination .active span,.cp-team-section_v3 .cp-team-item .cp-caption h3 a,.cp-team-detail .cp-about-text h3,.cp-team-detail .cp-signature,.cp-career-listed h3
 ,.cp-event-item2 .cp-meta-list li .fa,.cp-event-list-item .cp-thumb .date,.cp-event-list-item .cp-text .first,.cp-event-list-item .cp-meta-list li .fa,.cp-tab-box .nav-tabs > li > a,.cp-meta-list2 li,.widget-banner .cp-thumb .cp-caption span,.cp-pro-detail-info .items-list li .fa,.cp-pro-detail-info .cp-text .price,.categories-list > li span,.categories-list .cp-social-links a,.cp-cart-bottom h3
 ,.cp-checkout-form .inner-holder a:hover,.checkout-table-row .woocommerce .cp-shop_table thead th,.cp-error-inner h3 a,.cp-get-box .cp-text h3,.cp_galleryFilter a:hover,.cp_galleryFilter a.current,.view-more,.view-more:hover,.color{
-	color:#c0a375;
+	color:#00aedb;
 }
 
 
 /*
 Border Color Css*/
 .cp-nav-holder .navbar-nav li ul,.cp-cart-holder .cp-cart-inner,.cp-nav-holder .navbar-nav li .cp-mega-menu .dropdown-menu,.cp-range-slider-holder .ui-slider .ui-slider-handle,#cp-calendar .fc-event { 
-	border-color:#c0a375;
+	border-color:#00aedb;
 }
 .cp-pagination-row .pagination > li:before,.cp-pagination-row .pagination li.active:before{
-	border-top-color: #c0a375;
+	border-top-color: #00aedb;
 }
 
 /*+++++++++++++ Default Theme color 2 Css +++++++++++++*/
