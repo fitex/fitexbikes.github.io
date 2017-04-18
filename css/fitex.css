@@ -18,3 +18,13 @@
     color: white !important;
     font-size: 24px !important;
 }
+
+.Brand {
+
+}
+
+.Brand-image {
+    width: 100%;
+    height: 130px;
+    background-size: cover;
+}

@@ -1,5 +1,13 @@
 name : Fitex Bikes
+email : info@fitexbikes.com
+permalink: pretty
 
 collections:
+  posts:
+    output: true
+    permalink: /blog/:title
+  brands:
+    output: false
   bikes:
     output: false
+
