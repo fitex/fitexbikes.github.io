@@ -1929,7 +1929,7 @@ ul ul,ol ol{
 	-ms-transform: translateY(0%);
 	-o-transform: translateY(0%);
 	transform: translateY(0%);
-} 
+}
 .cp-event-item:hover .cp-caption .cp-bottom{
 	background-color: rgba(47,39,37,0.9);
 }
@@ -3009,7 +3009,7 @@ ul ul,ol ol{
 	margin: 0;
 	padding: 30px 20px;
 	background-color: #fff;
-	box-shadow: 
+	box-shadow:
 }
 #cp-product-slider1 .owl-controls{
 	margin: 0;
@@ -4111,7 +4111,7 @@ ul ul,ol ol{
 	margin-top: 20px;
 }
 .cp-price-item .cp-btn-style1{
-	padding: 
+	padding:
 }
 /*===========================================================================*/
 					/*Discount Section  Css*/
@@ -4310,7 +4310,7 @@ ul ul,ol ol{
 	color: #a8a8a8;
 }
 .cp-events-inner .cp-text p a{
-	color: #a8a8a8; 
+	color: #a8a8a8;
 }
 .cp-reviewer-holder{
 	float: left;
@@ -4441,7 +4441,7 @@ ul ul,ol ol{
 }
 #cp-review-slider .owl-controls .owl-prev:before {
 	font-family:'FontAwesome';
-	content:"\f104";	
+	content:"\f104";
 }
 #cp-review-slider .owl-controls .owl-next:before{
 	font-family:'FontAwesome';
@@ -4833,7 +4833,7 @@ ul ul,ol ol{
 	color: #424242;
 }
 .cp-checkout_table{
-	
+
 }
 .checkout-inner-holder{
 	float: left;
@@ -5901,26 +5901,26 @@ a,ul li,.cp-btn-style1,.cp-btn-style2:before,.cp-btn-style1:before,.navbar-nav l
 /*
  Animate Right To Left***/
 @keyframes bounceRight {
-    0%{ 
+    0%{
     	transform: translateX(40px);
     }
-     100%{ 
+     100%{
      	transform: translateX(0px);
      }
 }
 @-webkit-keyframes bounceRight {
-    0%{ 
+    0%{
     	-webkit-transform: translateX(40px);
     }
-     100%{ 
+     100%{
      	-webkit-transform: translateX(0px);
      }
 }
 @-ms-keyframes bounceRight {
-    0%{ 
+    0%{
     	-ms-transform: translateX(40px);
     }
-     100%{ 
+     100%{
      	-ms-transform: translateX(0px);
      }
 }
@@ -5931,26 +5931,26 @@ a,ul li,.cp-btn-style1,.cp-btn-style2:before,.cp-btn-style1:before,.navbar-nav l
 /*
  Animate Left To Right***/
 @keyframes bounceLeft {
-    0%{ 
+    0%{
     	transform: translateX(-40px);
     }
-     100%{ 
+     100%{
      	transform: translateX(0px);
      }
 }
 @-webkit-keyframes bounceLeft {
-    0%{ 
+    0%{
     	-webkit-transform: translateX(-40px);
     }
-     100%{ 
+     100%{
      	-webkit-transform: translateX(-0px);
      }
 }
 @-ms-keyframes bounceLeft {
-    0%{ 
+    0%{
     	-ms-transform: translateX(-40px);
     }
-     100%{ 
+     100%{
      	-ms-transform: translateX(0px);
      }
 }

@@ -133,17 +133,16 @@ classes: wrapper transparent text-light not-sticky
             <div class="cp-about-text">
               <div class="cp-heading-style1_v1">
                 <span class="small">.01</span>
-                <h2><span>Welcome </span>to Rider Club</h2>
+                <h2>{{ site.name }}</h2>
               </div>
-              <p class="first">RIDER ipsum dolor sit amet, consectetuer adipiscing elitSuspendisse et justo. Praesent
-                mattis commodo augue Aliquam Praesent mattis.</p>
+              <p class="first"><span>Gespecialiseerd</span> in koersfietsen, MTB, crossfietsen, gravelracers</p>
               <p>Etiam dictum. Nunc enim. Sed massa tellus, aliquam rhoncus, venenatis quis, suscipit ac, libero.
                 Praesent odio tellus, posuere sed, dictum sed, fermentum at, orci. Aenean arcu tortor, suscipit vitae,
                 hendrerit condimentum, dapibus ac, nulla. Curabitur sit consectetuer ipsum dolor sit amet justo et sit
                 amet justo consectetuer adipiscing elit.</p>
               <div class="cp-bottom">
-                <a href="about.html" class="cp-btn-style1">Read More</a>
-                <strong class="cp-signature">David Mate</strong>
+                <a href="mailto:{{ site.email }}" class="cp-btn-style1">Contact</a>
+                <strong class="cp-signature">Johnny</strong>
               </div>
             </div><!--About Text End-->
           </div>
@@ -156,7 +155,31 @@ classes: wrapper transparent text-light not-sticky
       </div>
     </section><!--About Section End-->
 
-    <!--Services Section Start-->
+    <!-- ONZE MERKEN -->
+    <section id="merken" name="merken" class="cp-event-section pd-tb100">
+      <div class="container">
+        <div class="cp-heading-style1_v1">
+          <span class="small">.03</span>
+          <h2><span>Onze </span>merken</h2>
+        </div>
+        <div class="row">
+          {% for brand in site.brands %}
+          <div class="col-md-4 col-sm-12">
+            <div class="Brand">
+              <div class="Brand-image" style="background-image: url({{ brand.img }})">
+              </div>
+              <div class="cp-text">
+                <h3>{{ brand.name }}</h3>
+                {{ brand.description }}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- DIENSTEN -->
     <section class="cp-services-section cp-services-section_h">
       <!--Services Thumb Start-->
       <div class="cp-services-thumb">
@@ -167,7 +190,7 @@ classes: wrapper transparent text-light not-sticky
       <div class="cp-services-inner">
         <div class="cp-heading-style1_v2">
           <span class="small">.02</span>
-          <h2><span>Our </span>Best Services</h2>
+          <h2><span>Onze</span> diensten</h2>
         </div>
         <ul class="cp-services-listed row">
           <li class="col-md-6 col-sm-6">
@@ -192,7 +215,7 @@ classes: wrapper transparent text-light not-sticky
             <!--Services Item Start-->
             <div class="cp-services-item">
               <span class="icon-shopping-trolley-full icomoon"> </span>
-              <h3>Rental Department</h3>
+              <h3>Duurzame herstelling</h3>
               <p>Etiam dictum. Nunc enim. S massa tellus, aliquam rhoncus, venenatis quis, suscipit ac, libero.</p>
               <a href="#" class="readmore">Read More</a>
             </div><!--Services Item End-->
@@ -211,30 +234,52 @@ classes: wrapper transparent text-light not-sticky
 
     </section><!--Services Section End-->
 
-    <!--Event Section Start-->
-    <section id="merken" name="merken" class="cp-event-section pd-tb100">
+    <!-- FIETSEN IN DE KIJKER -->
+    <section id="fietsen" name="fietsen" class="cp-product-section pd-tb100">
       <div class="container">
         <div class="cp-heading-style1_v1">
-          <span class="small">.03</span>
-          <h2><span>Onze </span>merken</h2>
+          <span class="small">.05</span>
+          <h2><span>Fietsen</span> in de kijker</h2>
         </div>
-        <div class="row">
-          {% for brand in site.brands %}
-          <div class="col-md-4 col-sm-12">
-            <div class="cp-blog-item cp-blog-item2">
-              <figure class="cp-thumb">
-                <img src="images/blog-sm-img-01.jpg" alt="">
-              </figure>
-              <div class="cp-text">
-                <h3>{{ brand.name }}</h3>
-                {{ brand.description }}
+        <div class="cp-tabs-holder">
+          <!-- Nav tabs Start -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li><a href="#tab-race" aria-controls="tab-race" role="tab" data-toggle="tab">Race</a></li>
+            <li><a href="#tab-mtb" aria-controls="tab-mtb" role="tab" data-toggle="tab">MTB</a></li>
+            <li><a href="#tab-cross" aria-controls="tab-cross" role="tab" data-toggle="tab">Cross/Gravel</a></li>
+          </ul>  <!-- Nav tabs End -->
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="tab-race">
+              <div class="row">
+                {% assign raceBikes = site.bikes | where: "category", "race" %}
+                {% for bike in raceBikes %}
+                {% include bike.html %}
+                {% endfor %}
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in active" id="tab-mtb">
+              <div class="row">
+                {% assign mtbBikes = site.bikes | where: "category", "mtb" %}
+                {% for bike in mtbBikes %}
+                {% include bike.html %}
+                {% endfor %}
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in active" id="tab-cross">
+              <div class="row">
+                {% assign crossBikes = site.bikes | where: "category", "cross" %}
+                {% for bike in crossBikes %}
+                {% include bike.html %}
+                {% endfor %}
               </div>
             </div>
           </div>
-          {% endfor %}
+
         </div>
       </div>
-    </section><!--Event Section End-->
+    </section><!--Product Section End-->
 
     <!--Testimonial Section Start-->
     <section id="diensten" name="diensten" class="cp-testimonial-section pd-tb100">
@@ -253,362 +298,6 @@ classes: wrapper transparent text-light not-sticky
 
       </div>
     </section><!--Testimonial Section End-->
-
-    <!-- FIETSEN -->
-    <section id="fietsen" name="fietsen" class="cp-product-section pd-tb100">
-      <div class="container">
-        <div class="cp-heading-style1_v1">
-          <span class="small">.05</span>
-          <h2><span>Fietsen</span> in de kijker</h2>
-        </div>
-        <div class="cp-tabs-holder">
-          <!-- Nav tabs Start -->
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="active"><a href="#tab-01" aria-controls="tab-01" role="tab" data-toggle="tab">Road</a></li>
-            <li><a href="#tab-02" aria-controls="tab-02" role="tab" data-toggle="tab">Mountain</a></li>
-            <li><a href="#tab-03" aria-controls="tab-03" role="tab" data-toggle="tab">Triathlon</a></li>
-            <li><a href="#tab-04" aria-controls="tab-04" role="tab" data-toggle="tab">Commuter & Fitness</a></li>
-            <li><a href="#tab-05" aria-controls="tab-05" role="tab" data-toggle="tab">Youth</a></li>
-            <li><a href="#tab-06" aria-controls="tab-06" role="tab" data-toggle="tab">BMW </a></li>
-          </ul>  <!-- Nav tabs End -->
-
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="tab-01">
-              <div class="row">
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img1.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Propel Advanced SL 0</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1580.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img2.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Cross Country</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1950.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img3.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Mountain bikes</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$2350.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="tab-02">
-              <div class="row">
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img2.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Propel Advanced SL 0</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1580.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img3.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Cross Country</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1950.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img1.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Mountain bikes</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$2350.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="tab-03">
-              <div class="row">
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img2.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Propel Advanced SL 0</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1580.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img1.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Cross Country</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1950.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img3.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Mountain bikes</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$2350.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="tab-04">
-              <div class="row">
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img2.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Propel Advanced SL 0</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1580.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img3.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Cross Country</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1950.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img1.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Mountain bikes</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$2350.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="tab-05">
-              <div class="row">
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img2.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Propel Advanced SL 0</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1580.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img1.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Cross Country</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1950.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img3.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Mountain bikes</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$2350.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="tab-06">
-              <div class="row">
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img3.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Propel Advanced SL 0</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1580.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img2.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Cross Country</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$1950.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <!--Product Item Start-->
-                  <div class="cp-pro-item">
-                    <div class="cp-pro-img">
-                      <img src="images/product-img1.jpg" alt="">
-                    </div>
-                    <div class="cp-text">
-                      <h3><a href="product-detail.html">Mountain bikes</a></h3>
-                      <span class="small">EST. 1999 </span>
-                      <span class="pro-price">$2350.00</span>
-                      <ul class="cp-pro-meta">
-                        <li class="pro-cart"><a href="#"><span class="icon-shopping-cart icomoon"></span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
-                  </div><!--Product Item End-->
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!--Product Section End-->
 
     <!--Team Section Start-->
     <section class="cp-team-section pd-tb100">
