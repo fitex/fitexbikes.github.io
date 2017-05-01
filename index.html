@@ -167,9 +167,9 @@ classes: wrapper transparent text-light not-sticky
           <div class="col-md-4 col-sm-12">
             <div class="Brand">
               <div class="Brand-image" style="background-image: url({{ brand.img }})">
+                <h3 class="Brand-title">{{ brand.name }}</h3>
               </div>
               <div class="cp-text">
-                <h3>{{ brand.name }}</h3>
                 {{ brand.description }}
               </div>
             </div>
@@ -234,6 +234,24 @@ classes: wrapper transparent text-light not-sticky
 
     </section><!--Services Section End-->
 
+    <!-- DIENSTEN 2 -->
+    <section id="diensten" name="diensten" class="cp-testimonial-section pd-tb100">
+      <div class="container">
+        <div class="cp-heading-style1_v1">
+          <span class="small">.04</span>
+          <h2><span>Onze </span>diensten</h2>
+        </div>
+
+        <!--Testimonial Inner Start-->
+        <div class="cp-testimonial-inner">
+          <p>Onderhoud en verkoop van koersfietsen, mountainbikes, crossfietsen en gravelracers. Ecologisch, herstellingen op een duurzame manier, geen wegwerp politiek</p>
+          <strong class="cp-signature">Johnny</strong>
+          <span>Executive Memeber of club</span>
+        </div><!--Testimonial Inner End-->
+
+      </div>
+    </section><!--Testimonial Section End-->
+
     <!-- FIETSEN IN DE KIJKER -->
     <section id="fietsen" name="fietsen" class="cp-product-section pd-tb100">
       <div class="container">
@@ -281,90 +299,6 @@ classes: wrapper transparent text-light not-sticky
       </div>
     </section><!--Product Section End-->
 
-    <!--Testimonial Section Start-->
-    <section id="diensten" name="diensten" class="cp-testimonial-section pd-tb100">
-      <div class="container">
-        <div class="cp-heading-style1_v1">
-          <span class="small">.04</span>
-          <h2><span>Onze </span>diensten</h2>
-        </div>
-
-        <!--Testimonial Inner Start-->
-        <div class="cp-testimonial-inner">
-          <p>Onderhoud en verkoop van koersfietsen, mountainbikes, crossfietsen en gravelracers. Ecologisch, herstellingen op een duurzame manier, geen wegwerp politiek</p>
-          <strong class="cp-signature">Johnny</strong>
-          <span>Executive Memeber of club</span>
-        </div><!--Testimonial Inner End-->
-
-      </div>
-    </section><!--Testimonial Section End-->
-
-    <!--Team Section Start-->
-    <section class="cp-team-section pd-tb100">
-      <div class="container">
-        <div class="cp-heading-style1_v2">
-          <span class="small">.06</span>
-          <h2><span>Our </span>instructor</h2>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-4">
-            <!--Team Item Start-->
-            <figure class="cp-team-item">
-              <img src="images/team-thumb-img1.jpg" alt="">
-              <figcaption class="cp-caption">
-                <h3><a href="team-details.html">Jomas Wallewr</a></h3>
-                <span>Head Instructors</span>
-                <a href="team-details.html" class="cp-btn-style1">View Details</a>
-                <ul class="cp-social-links">
-                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                </ul>
-              </figcaption>
-            </figure><!--Team Item End-->
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <!--Team Item Start-->
-            <figure class="cp-team-item">
-              <img src="images/team-thumb-img2.jpg" alt="">
-              <figcaption class="cp-caption">
-                <h3><a href="team-details.html">Kathy Young</a></h3>
-                <span>Founder</span>
-                <a href="team-details.html" class="cp-btn-style1">View Details</a>
-                <ul class="cp-social-links">
-                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                </ul>
-              </figcaption>
-            </figure><!--Team Item End-->
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <!--Team Item Start-->
-            <figure class="cp-team-item">
-              <img src="images/team-thumb-img3.jpg" alt="">
-              <figcaption class="cp-caption">
-                <h3><a href="team-details.html">John Deo</a></h3>
-                <span>Bike Designer</span>
-                <a href="team-details.html" class="cp-btn-style1">View Details</a>
-                <ul class="cp-social-links">
-                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                </ul>
-              </figcaption>
-            </figure><!--Team Item End-->
-          </div>
-        </div>
-      </div>
-    </section><!--Team Section End-->
-
     <!--Blog Section Start-->
     <section class="cp-blog-section pd-tb100">
       <div class="container">
@@ -373,81 +307,31 @@ classes: wrapper transparent text-light not-sticky
           <h2><span>Our </span>Blog</h2>
         </div>
         <div class="owl-carousel pretty-gallery" id="cp-blog-slider">
-          <div class="item">
-            <!--Blog Item Start-->
-            <div class="cp-blog-item">
-              <figure class="cp-thumb">
-                <img src="images/blog-md-img1.jpg" alt="">
-                <figcaption class="cp-caption">
-                  <span>Tips</span>
-                  <a href="images/blog-md-img1.jpg" class="zoomIn" data-rel="prettyPhoto"><i
-                      class="fa fa-search-plus"></i></a>
-                </figcaption>
-              </figure>
-              <div class="cp-text">
-                <ul class="cp-meta-list">
-                  <li>March 18, 2016.</li>
-                </ul>
-                <h3><a href="blog-details.html">9 Things All Strava Users Do—But Would Never Admit to Doing</a></h3>
-                <ul class="cp-meta-list">
-                  <li>By jennifer sherry</li>
-                </ul>
-                <p>Etiam dictum. Nunc enim. Sed massa tellus, aliquam rhoncus, venenatis quis, suscipit ac, libero. </p>
-                <p>Praesent odio tellus, posuere sed, dictum sed, fermentum at, orci... <a
-                    href="blog-details.html">{+}</a></p>
-              </div>
-            </div><!--Blog Item End-->
-          </div>
-          <div class="item">
-            <!--Blog Item Start-->
-            <div class="cp-blog-item">
-              <figure class="cp-thumb">
-                <img src="images/blog-md-img2.jpg" alt="">
-                <figcaption class="cp-caption">
-                  <span>News</span>
-                  <a href="images/blog-md-img2.jpg" class="zoomIn" data-rel="prettyPhoto"><i
-                      class="fa fa-search-plus"></i></a>
-                </figcaption>
-              </figure>
-              <div class="cp-text">
-                <ul class="cp-meta-list">
-                  <li>April 25, 2016.</li>
-                </ul>
-                <h3><a href="blog-details.html">9 Things All Strava Users Do—But Would Never Admit to Doing</a></h3>
-                <ul class="cp-meta-list">
-                  <li>By Niky</li>
-                </ul>
-                <p>Etiam dictum. Nunc enim. Sed massa tellus, aliquam rhoncus, venenatis quis, suscipit ac, libero. </p>
-                <p>Praesent odio tellus, posuere sed, dictum sed, fermentum at, orci... <a
-                    href="blog-details.html">{+}</a></p>
-              </div>
-            </div><!--Blog Item End-->
-          </div>
-          <div class="item">
-            <!--Blog Item Start-->
-            <div class="cp-blog-item">
-              <figure class="cp-thumb">
-                <img src="images/blog-md-img1.jpg" alt="">
-                <figcaption class="cp-caption">
-                  <span>Tips</span>
-                  <a href="images/blog-md-img1.jpg" class="zoomIn" data-rel="prettyPhoto"><i
-                      class="fa fa-search-plus"></i></a>
-                </figcaption>
-              </figure>
-              <div class="cp-text">
-                <ul class="cp-meta-list">
-                  <li>May 03, 2016.</li>
-                </ul>
-                <h3><a href="blog-details.html">9 Things All Strava Users Do—But Would Never Admit to Doing</a></h3>
-                <ul class="cp-meta-list">
-                  <li>By John Doe</li>
-                </ul>
-                <p>Etiam dictum. Nunc enim. Sed massa tellus, aliquam rhoncus, venenatis quis, suscipit ac, libero. </p>
-                <p>Praesent odio tellus, posuere sed, dictum sed, fermentum at, orci... <a
-                    href="blog-details.html">{+}</a></p>
-              </div>
-            </div><!--Blog Item End-->
-          </div>
+
+          {% for post in site.posts limit:3 %}
+            <div class="item">
+              <!--Blog Item Start-->
+              <div class="cp-blog-item">
+                <figure class="cp-thumb">
+                  <div class="Post-image" style="background-image: url({{ post.img }});"></div>
+                  <figcaption class="cp-caption">
+                    <span>{{ post.category }}</span>
+                    <a href="{{ post.img }}" class="zoomIn" data-rel="prettyPhoto"><i
+                        class="fa fa-search-plus"></i></a>
+                  </figcaption>
+                </figure>
+                <div class="cp-text">
+                  <ul class="cp-meta-list">
+                    <li>{{ post.date | date: "%B %d, %Y" }}</li>
+                  </ul>
+                  <h3>{{ post.title }}</h3>
+                  <div class="Post-content">
+                    {{ post.content }}
+                  </div>
+                </div>
+              </div><!--Blog Item End-->
+            </div>
+          {% endfor %}
         </div>
       </div>
     </section><!--Blog Section End-->
