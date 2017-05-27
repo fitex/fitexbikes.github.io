@@ -150,7 +150,7 @@ classes: wrapper transparent text-light not-sticky
           </div>
           <div class="col-md-6">
             <div class="cp-abuout-thumb">
-              <img src="images/about-img1.jpg" alt="">
+              <img src="media/fitex-bikes.jpg" alt="Fitex Bike Frame">
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@ classes: wrapper transparent text-light not-sticky
     <section id="merken" name="merken" class="cp-event-section pd-tb100">
       <div class="container">
         <div class="cp-heading-style1_v1">
-          <span class="small">.03</span>
+          <span class="small">.02</span>
           <h2><span>Onze </span>merken</h2>
         </div>
         <div class="row">
@@ -237,7 +237,7 @@ classes: wrapper transparent text-light not-sticky
     <section id="diensten" name="diensten" class="cp-testimonial-section pd-tb100">
       <div class="container">
         <div class="cp-heading-style1_v1">
-          <span class="small">.04</span>
+          <span class="small">.03</span>
           <h2><span>Onze </span>diensten</h2>
         </div>
 
@@ -255,7 +255,7 @@ classes: wrapper transparent text-light not-sticky
     <section id="fietsen" name="fietsen" class="cp-product-section pd-tb100">
       <div class="container">
         <div class="cp-heading-style1_v1">
-          <span class="small">.05</span>
+          <span class="small">.04</span>
           <h2><span>Fietsen</span> in de kijker</h2>
         </div>
         <div class="cp-tabs-holder">
@@ -302,8 +302,8 @@ classes: wrapper transparent text-light not-sticky
     <section id="nieuws" name="nieuws" class="cp-blog-section pd-tb100">
       <div class="container">
         <div class="cp-heading-style1_v1">
-          <span class="small">.07</span>
-          <h2><span>Our </span>Blog</h2>
+          <span class="small">.05</span>
+          <h2><span>Nieuws</span></h2>
         </div>
         <div class="owl-carousel pretty-gallery" id="cp-blog-slider">
 
@@ -349,43 +349,22 @@ classes: wrapper transparent text-light not-sticky
             <div class="cp-instagram-text">
               <i class="fa fa-instagram" aria-hidden="true"></i>
               <div class="cp-bottom">
-                <span>images from</span>
-                <h3>Gallery</h3>
+                <span>Belgian Quality</span>
+                <h3>Bikes</h3>
               </div>
             </div>
           </div>
           <div class="col-md-10 col-sm-10">
             <ul class="cp-instagram-listed">
-              <li>
-                <figure class="cp-thumb">
-                  <a href="#"><img src="images/flickr-img1.jpg" alt=""></a>
-                </figure>
-              </li>
-              <li>
-                <figure class="cp-thumb">
-                  <a href="#"><img src="images/flickr-img2.jpg" alt=""></a>
-                </figure>
-              </li>
-              <li>
-                <figure class="cp-thumb">
-                  <a href="#"><img src="images/flickr-img3.jpg" alt=""></a>
-                </figure>
-              </li>
-              <li>
-                <figure class="cp-thumb">
-                  <a href="#"><img src="images/flickr-img4.jpg" alt=""></a>
-                </figure>
-              </li>
-              <li>
-                <figure class="cp-thumb">
-                  <a href="#"><img src="images/flickr-img5.jpg" alt=""></a>
-                </figure>
-              </li>
-              <li>
-                <figure class="cp-thumb">
-                  <a href="#"><img src="images/flickr-img6.jpg" alt=""></a>
-                </figure>
-              </li>
+              {% for image in site.static_files %}
+                {% if image.path contains 'media/gallery' %}
+                <li>
+                  <figure class="cp-thumb">
+                    <a href="#"><img src="{{ site.baseurl }}{{ image.path }}" alt="image" width="248" height="258" /></a>
+                  </figure>
+                </li>
+                {% endif %}
+              {% endfor %}
             </ul>
           </div>
         </div>
