@@ -10,4 +10,8 @@ $(function() {
         });
         return false;
     });
+
+
+    // Make race bikes default
+    $('.js-clickOnLoad').click();
 });
